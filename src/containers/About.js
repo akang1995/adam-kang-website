@@ -88,6 +88,11 @@ const ProjectData = [
       "https://apps.apple.com/app/id1526501493?fbclid=IwAR2LxUdyAoroZ_tJVejTcEpDCz62mShfZMnM1GKYlpvfQ4_xYQy9eKO_uNg",
     description:
       " a mobile learning app that teaches relevant skills through bite-sized lessons"
+  },
+  {
+    name: "betterfi",
+    url: "https://betterfi.netlify.app/",
+    description: " a financial model template built for startups"
   }
 ];
 
