@@ -9,16 +9,18 @@ import EmailIcon from "@material-ui/icons/Email";
 import { isMobile } from "react-device-detect";
 
 import headshot from "../assets/headshot.jpg";
+const width = window.innerWidth;
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     padding: 20,
-    marginRight: isMobile ? "5%" : "15%",
-    marginLeft: isMobile ? "5%" : "15%"
+    marginRight: isMobile ? width * 0.05 : width * 0.15,
+    marginLeft: isMobile ? width * 0.05 : width * 0.15
   },
   image: {
-    maxWidth: isMobile ? "40%" : "14%",
+    width: isMobile ? width * 0.4 : width * 0.14,
+    height: isMobile ? width * 0.4 : width * 0.14,
     borderRadius: 200
   },
   textBlock: {
