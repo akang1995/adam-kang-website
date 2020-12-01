@@ -6,6 +6,7 @@ import TwitterIcon from "@material-ui/icons/Twitter";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import EmailIcon from "@material-ui/icons/Email";
+import { isMobile } from "react-device-detect";
 
 import headshot from "../assets/headshot.jpg";
 
@@ -13,24 +14,17 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     padding: 20,
-    marginRight: "15%",
-    marginLeft: "15%"
+    marginRight: isMobile ? "5%" : "15%",
+    marginLeft: isMobile ? "5%" : "15%"
   },
   image: {
-    maxWidth: "14%",
+    maxWidth: isMobile ? "40%" : "14%",
     borderRadius: 200
   },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: "center",
-    color: theme.palette.text.secondary
-  },
   textBlock: {
-    marginBottom: "2%"
+    marginBottom: isMobile ? "8%" : "2%"
   },
   projectBlock: {
-    display: "flex",
-    flexDirection: "row",
     marginBottom: "2%"
   },
   title: {
@@ -141,8 +135,13 @@ export const About = () => {
         </Grid>
         <Grid
           container
-          xs={2}
-          style={{ padding: "1%", marginTop: "2%" }}
+          xs={7}
+          lg={2}
+          style={{
+            padding: isMobile ? "5%" : "1%",
+            marginTop: isMobile ? "4%" : "2%",
+            marginBottom: isMobile ? "4%" : "0%"
+          }}
           direction="row"
           justify="space-between"
           alignItems="center"
